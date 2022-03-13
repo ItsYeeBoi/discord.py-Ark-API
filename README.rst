@@ -13,7 +13,7 @@ Dependencies
 Installing
 ----------
 
-**Install Python Here: `Python <https://www.python.org/downloads/>`_**
+**Install Python Here:** `Python <https://www.python.org/downloads/>`_ 
 
 **Python 3.6 or higher is required**
 
