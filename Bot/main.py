@@ -15,7 +15,7 @@ description = """Multipurpose Bot Used To Search Through Arks API's"""
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=prefix, description=description, intents=intents)
 
-for filename in os.listdir("Complete Bot/Cogs"):
+for filename in os.listdir("./Cogs"):
     if filename.endswith(".py"):
         bot.load_extension(f"Cogs.{filename[:-3]}")
         print(f"Cogs.{filename[:-3]} Loaded")

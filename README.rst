@@ -1,24 +1,24 @@
 discord.py Ark Api
-==================
+##################
 
 Using discord.py to interact with ark's web API.
 
 Dependencies
-------------
+============
 
 - `discord.py <https://github.com/Rapptz/discord.py>`__
 - `aiohttp <https://github.com/aio-libs/aiohttp>`__
 - `python-dotenv <https://github.com/theskumar/python-dotenv>`__
 
 Installing
-----------
+==========
 
 **Install Python Here:** `Python <https://www.python.org/downloads/>`_ 
 
 **Python 3.6 or higher is required**
 
 Downloading the files
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 Click green Code button in the top right and click download ZIP
 
@@ -29,10 +29,9 @@ Or install using `Git <https://git-scm.com/>`_ in a terminal
     $ git clone https://github.com/ItsYeeBoi/discord.py-Ark-API
     $ cd discord.py-Ark-API
 
-Rename example.env to .env
 
 Example .env file
-~~~~~~~~~~~~~~~~~
+-----------------
 
 .. code-block:: text
 
@@ -40,44 +39,72 @@ Example .env file
     TOKEN=PUT DISCORD TOKEN HERE
     # Discord Prefix
     PREFIX=!
-    # Discord Channel ID
-    CHANNEL_ID=378270498058478241
-    # Discord Message ID
-    MESSAGE_ID=792344569530323838
 
-To get Channel/Message ID make sure Developer Mode is enabled in settings
-
-Path: Settings-App Settings-Advanced
+To get your Discord token follow this guide: `Discord Token <https://www.writebots.com/discord-bot-token/>`_ 
 
 Intalling Dependencies
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 .. code-block:: sh
 
     pip install -r requirements.txt
 
 Running The Bot
----------------
+===============
 
-Double click main.py file
+Windows:
+--------
 
-Logged in as
+Double click main.py file it should open command prompt then the bot is running
 
-ArkBot
+Or in command prompt run the command
 
-844759644314740435
+.. code-block:: sh
 
-2022-03-12 15:26:19.354852
+    python main.py
 
-After that message has been printed to your terminal the bot is up and working
+To run the bot with PM2:
+
+`Nodejs <https://nodejs.org/en/download/>`_ needs to be installed
+
+.. code-block:: sh
+
+    npm install pm2 -g
+    pm2 start main.py
+
+Linux:
+------
+
+.. code-block:: sh
+
+    nano .env or gedit .env
+    pip install -r requirements.txt
+    cd Bot
+    python3 main.py
+
+If pip isn't installed use:
+
+.. code-block:: sh
+
+    apt install python3-pip
+
+
+To Run The Bot Using PM2:
+
+.. code-block:: sh
+
+    apt install nodejs
+    apt install npm
+    npm install pm2 -g
+    cd Bot
+    pm2 start main.py --interpreter python3
 
 Plans
 -----
-- Add Xbox Official API
-
-  - Two more commands: official and smalls
 - Add PS4 Official API
 - Add PS4 Dedicated Servers
+
+  - Use Nitrado PS4 Server List
 
 Links
 -----

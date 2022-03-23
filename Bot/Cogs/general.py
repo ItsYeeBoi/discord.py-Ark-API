@@ -10,9 +10,9 @@ class General(commands.Cog):
     
     @commands.command()
     async def info(self, ctx):
-        print("Message from {0.author}: {0.content} - {1}".format(ctx.message, datetime.utcnow()))
+        print(f"Message from {ctx.message.author}: {ctx.message.content} - {datetime.utcnow()}")
         try:
-            filename = "Complete Bot\data.json"
+            filename = "data.json"
             with open(filename, "r") as file:
                 data = json.load(file)
                 info_embed = discord.Embed(title=f"<:xbox:951998441624592454> {self.client.user.name} | Ark: Survival Evolved Statistics", color=discord.Color.random(), timestamp=datetime.utcnow())

@@ -10,11 +10,11 @@ class Xbox(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.filename = "Complete Bot/data.json"
+        self.filename = "data.json"
     
     @commands.command(brief="Usage: xo <Server Name> | Searches For A Xbox Official Server", description="Usage: .xo <Server Name>")
     async def xo(self, ctx, args):
-        print("Message from {0.author}: {0.content} - {1}".format(ctx.message, datetime.utcnow()))
+        print(f"Message from {ctx.message.author}: {ctx.message.content} - {datetime.utcnow()}")
         getting_data = discord.Embed(title=f"{self.client.user.name} | Retrieving Data", color=discord.Color.random(), timestamp=datetime.utcnow())
         getting_data.set_footer(text=f"Requested By {ctx.message.author}")
         getting_data.add_field(name="This Message Will Update Once We Have The Data", value="If This Message Doesnt Update Please Try Again", inline=False)

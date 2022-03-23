@@ -3,7 +3,7 @@ import json
 import aiohttp
 
 async def get_data():
-    filename = "complete bot\data.json"
+    filename = "data.json"
     async with aiohttp.ClientSession() as session:
         try:
             async with session.get("http://arkdedicated.com/banlist.txt") as r:
