@@ -141,7 +141,6 @@ class Xbox(commands.Cog):
                                 "day_time": server_daytime,
                                 "total_players": server_players
                             }
-                            print(server_daytime)
                             file_data["etags"][0]["official_server"] = r.headers["ETag"]
                             total_searches = file_data["searches"][0]["total_searches"]
                             file_data["searches"][0]["total_searches"] = total_searches + 1
