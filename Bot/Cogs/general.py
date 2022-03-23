@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from datetime import datetime
+from time import time
 import json
 
 class General(commands.Cog):
@@ -11,11 +12,12 @@ class General(commands.Cog):
     @commands.command()
     async def info(self, ctx):
         print(f"Message from {ctx.message.author}: {ctx.message.content} - {datetime.utcnow()}")
+        start_time = time()
         try:
             filename = "data.json"
             with open(filename, "r") as file:
                 data = json.load(file)
-                info_embed = discord.Embed(title=f"<:xbox:951998441624592454> {self.client.user.name} | Ark: Survival Evolved Statistics", color=discord.Color.random(), timestamp=datetime.utcnow())
+                info_embed = discord.Embed(title=f"<:xbox:951998441624592454> {self.client.user.name} | Ark: Survival Evolved Statistics `[{round(time() - start_time, 2)}s]`", color=discord.Color.random(), timestamp=datetime.utcnow())
                 info_embed.set_footer(text=f"Requested By {ctx.message.author}")
                 # Bans
                 info_embed.add_field(name="<:online_status:947493937680101428> Global Bans",

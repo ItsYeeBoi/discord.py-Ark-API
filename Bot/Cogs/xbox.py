@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from datetime import datetime
+from time import time
 import json
 import aiohttp
 import asyncio
@@ -15,6 +16,7 @@ class Xbox(commands.Cog):
     @commands.command(brief="Usage: xo <Server Name> | Searches For A Xbox Official Server", description="Usage: .xo <Server Name>")
     async def xo(self, ctx, args):
         print(f"Message from {ctx.message.author}: {ctx.message.content} - {datetime.utcnow()}")
+        start_time = time()
         getting_data = discord.Embed(title=f"{self.client.user.name} | Retrieving Data", color=discord.Color.random(), timestamp=datetime.utcnow())
         getting_data.set_footer(text=f"Requested By {ctx.message.author}")
         getting_data.add_field(name="This Message Will Update Once We Have The Data", value="If This Message Doesnt Update Please Try Again", inline=False)
@@ -43,7 +45,7 @@ class Xbox(commands.Cog):
                                     server_map = players["MapName"]
                                     server_daytime = players["DayTime"]
                                     counter += 1
-                                    server_search_embed.title = f"<:xbox:951998441624592454> {self.client.user.name} | Ark Search For: {args}"
+                                    server_search_embed.title = f"<:xbox:951998441624592454> {self.client.user.name} | Ark Search For: {args} `[{round(time() - start_time, 2)}s]`"
                                     server_search_embed.set_footer(text=f"Requested By {ctx.message.author}")
                                     server_search_embed.add_field(name=f'<:online_status:947493937680101428> Server Is Online', value="The Data Below Is Up To Date", inline=False)
                                     server_search_embed.add_field(name=f'**Server Name:**', value=f'```{server_name}```', inline=False)
@@ -54,7 +56,7 @@ class Xbox(commands.Cog):
                         await embed.edit(embed=server_search_embed)
                         print(f"Embed Has Been Edited - {datetime.utcnow()}")
 
-                        with open(self.filename) as file:
+                        with open(self.filename, "r") as file:
                             file_data = json.load(file)
                             new_data = {
                                 "server_name": server_name,
@@ -92,7 +94,8 @@ class Xbox(commands.Cog):
 
     @commands.command(brief="Usage: xs <Server Name> | Searches For A Xbox Official Smalls Server", description="Usage: .xs <Server Name>")
     async def xs(self, ctx, args):
-        print("Message from {0.author}: {0.content} - {1}".format(ctx.message, datetime.utcnow()))
+        print(f"Message from {ctx.message.author}: {ctx.message.content} - {datetime.utcnow()}")
+        start_time = time()
         getting_data = discord.Embed(title=f"{self.client.user.name} | Retrieving Data", color=discord.Color.random(), timestamp=datetime.utcnow())
         getting_data.set_footer(text=f"Requested By {ctx.message.author}")
         getting_data.add_field(name="This Message Will Update Once We Have The Data", value="If This Message Doesnt Update Please Try Again", inline=False)
@@ -121,7 +124,7 @@ class Xbox(commands.Cog):
                                     server_map = players["MapName"]
                                     server_daytime = players["DayTime"]
                                     counter += 1
-                                    server_search_embed.title = f"<:xbox:951998441624592454> {self.client.user.name} | Ark Search For: {args}"
+                                    server_search_embed.title = f"<:xbox:951998441624592454> {self.client.user.name} | Ark Search For: {args} `[{round(time() - start_time, 2)}s]`"
                                     server_search_embed.set_footer(text=f"Requested By {ctx.message.author}")
                                     server_search_embed.add_field(name=f'<:online_status:947493937680101428> Server Is Online', value="The Data Below Is Up To Date", inline=False)
                                     server_search_embed.add_field(name=f'**Server Name:**', value=f'```{server_name}```', inline=False)
@@ -132,7 +135,7 @@ class Xbox(commands.Cog):
                         await embed.edit(embed=server_search_embed)
                         print(f"Embed Has Been Edited - {datetime.utcnow()}")
 
-                        with open(self.filename) as file:
+                        with open(self.filename, "r") as file:
                             file_data = json.load(file)
                             new_data = {
                                 "server_name": server_name,
@@ -170,7 +173,8 @@ class Xbox(commands.Cog):
     
     @commands.command(brief="Usage: xd <Server Name> | Searches For A Xbox Dedicated Server", description="Usage: .xd <Server Name>")
     async def xd(self, ctx, *args):
-        print("Message from {0.author}: {0.content} - {1}".format(ctx.message, datetime.utcnow()))
+        print(f"Message from {ctx.message.author}: {ctx.message.content} - {datetime.utcnow()}")
+        start_time = time()
         getting_data = discord.Embed(title=f"{self.client.user.name} | Retrieving Data", color=discord.Color.random(), timestamp=datetime.utcnow())
         getting_data.set_footer(text=f"Requested By {ctx.message.author}")
         getting_data.add_field(name="This Message Will Update Once We Have The Data", value="If This Message Doesnt Update Please Try Again", inline=False)
@@ -199,7 +203,7 @@ class Xbox(commands.Cog):
                                 total_players += players["NumPlayers"]
                                 servers_players = players["NumPlayers"]
                                 counter += 1
-                                server_search_embed.title = f"<:xbox:951998441624592454> {self.client.user.name} | Ark Server Search For {str_args} | Found {counter} Servers"
+                                server_search_embed.title = f"<:xbox:951998441624592454> {self.client.user.name} | Ark Server Search For {str_args} | Found {counter} Servers `[{round(time() - start_time, 2)}s]`"
                                 server_search_embed.set_footer(text=f"Requested By {ctx.message.author} - Total Players: {total_players}")
                                 server_search_embed.add_field(name=f'<:online_status:947493937680101428> {counter}: {players["Name"]}', value=f'```Map: {players["MapName"]}, Players: {servers_players}```', inline=False)
                         await embed.edit(embed=server_search_embed)
