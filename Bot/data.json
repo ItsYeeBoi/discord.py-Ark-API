@@ -4,8 +4,10 @@
             "pc_banlist": "",
             "xbox_banlist": "",
             "ps4_banlist": "",
-            "official_server": "",
-            "unofficial_server": ""
+            "xbox_official_server": "",
+            "xbox_unofficial_server": "",
+            "ps4_official_server": "",
+            "ps4_unofficial_server": ""
         }
     ],
     "bans": [
@@ -18,38 +20,70 @@
     ],
     "servers": [
         {
-            "official_servers": 0,
-            "official_servers_pvp": 0,
-            "official_servers_pve": 0,
-            "official_servers_smalls": 0,
-            "official_servers_legacy": 0,
-            "official_servers_arkpocalypse": 0,
-            "official_servers_hardcore": 0,
-            "total_official_servers_pvp": 0,
-            "total_official_servers_pve": 0,
-            "total_official_servers": 0,
-            "unofficial_servers_pvp": 0,
-            "unofficial_servers_pve": 0,
-            "total_unofficial_servers": 0,
-            "total_servers": 0
+            "xbox_official_servers": 0,
+            "xbox_official_servers_pvp": 0,
+            "xbox_official_servers_pve": 0,
+            "xbox_official_servers_smalls": 0,
+            "xbox_official_servers_legacy": 0,
+            "xbox_official_servers_arkpocalypse": 0,
+            "xbox_official_servers_hardcore": 0,
+            "xbox_total_official_servers_pvp": 0,
+            "xbox_total_official_servers_pve": 0,
+            "xbox_total_official_servers": 0,
+            "xbox_unofficial_servers_pvp": 0,
+            "xbox_unofficial_servers_pve": 0,
+            "xbox_total_unofficial_servers": 0,
+            "xbox_total_servers": 0
+        },
+        {
+            "ps4_official_servers": 0,
+            "ps4_official_servers_pvp": 0,
+            "ps4_official_servers_pve": 0,
+            "ps4_official_servers_smalls": 0,
+            "ps4_official_servers_legacy": 0,
+            "ps4_official_servers_arkpocalypse": 0,
+            "ps4_official_servers_hardcore": 0,
+            "ps4_total_official_servers_pvp": 0,
+            "ps4_total_official_servers_pve": 0,
+            "ps4_total_official_servers": 0,
+            "ps4_unofficial_servers_pvp": 0,
+            "ps4_unofficial_servers_pve": 0,
+            "ps4_total_unofficial_servers": 0,
+            "ps4_total_servers": 0
         }
     ],
     "players": [
         {
-            "official_servers_players": 0,
-            "official_servers_pvp_players": 0,
-            "official_servers_pve_players": 0,
-            "official_servers_smalls_players": 0,
-            "official_servers_legacy_players": 0,
-            "official_servers_arkpocalypse_players": 0,
-            "official_servers_hardcore_players": 0,
-            "total_official_pvp_players": 0,
-            "total_official_pve_players": 0,
-            "total_official_players": 0,
-            "unofficial_servers_pvp_players": 0,
-            "unofficial_servers_pve_players": 0,
-            "total_unofficial_players": 0,
-            "total_players": 0
+            "xbox_official_servers_players": 0,
+            "xbox_official_servers_pvp_players": 0,
+            "xbox_official_servers_pve_players": 0,
+            "xbox_official_servers_smalls_players": 0,
+            "xbox_official_servers_legacy_players": 0,
+            "xbox_official_servers_arkpocalypse_players": 0,
+            "xbox_official_servers_hardcore_players": 0,
+            "xbox_total_official_pvp_players": 0,
+            "xbox_total_official_pve_players": 0,
+            "xbox_total_official_players": 0,
+            "xbox_unofficial_servers_pvp_players": 0,
+            "xbox_unofficial_servers_pve_players": 0,
+            "xbox_total_unofficial_players": 0,
+            "xbox_total_players": 0
+        },
+        {
+            "ps4_official_servers_players": 0,
+            "ps4_official_servers_pvp_players": 0,
+            "ps4_official_servers_pve_players": 0,
+            "ps4_official_servers_smalls_players": 0,
+            "ps4_official_servers_legacy_players": 0,
+            "ps4_official_servers_arkpocalypse_players": 0,
+            "ps4_official_servers_hardcore_players": 0,
+            "ps4_total_official_pvp_players": 0,
+            "ps4_total_official_pve_players": 0,
+            "ps4_total_official_players": 0,
+            "ps4_unofficial_servers_pvp_players": 0,
+            "ps4_unofficial_servers_pve_players": 0,
+            "ps4_total_unofficial_players": 0,
+            "ps4_total_players": 0
         }
     ],
     "searches": [
@@ -59,7 +93,7 @@
             "total_players_found": 0
         }
     ],
-    "official_servers_and_players": [
+    "xbox_official_servers_and_players": [
         {
             "_comment": "You Can Delete This After You Have Atleast 1 Server In Here",
             "_comment2": "If You Dont Have 1 Server In Here It Wont Work",
@@ -70,7 +104,7 @@
             "total_players": 0
         }
     ],
-    "smalls_servers_and_players": [
+    "ps4_official_servers_and_players": [
         {
             "_comment": "You Can Delete This After You Have Atleast 1 Server In Here",
             "_comment2": "If You Dont Have 1 Server In Here It Wont Work",
@@ -81,7 +115,38 @@
             "total_players": 0
         }
     ],
-    "unofficial_servers_and_players": [
+    "xbox_smalls_servers_and_players": [
+        {
+            "_comment": "You Can Delete This After You Have Atleast 1 Server In Here",
+            "_comment2": "If You Dont Have 1 Server In Here It Wont Work",
+            "server_name": "TEST CHECK COMMENTS ABOVE",
+            "user_search": "",
+            "map_name": "",
+            "day_time": "",
+            "total_players": 0
+        }
+    ],
+    "ps4_smalls_servers_and_players": [
+        {
+            "_comment": "You Can Delete This After You Have Atleast 1 Server In Here",
+            "_comment2": "If You Dont Have 1 Server In Here It Wont Work",
+            "server_name": "TEST CHECK COMMENTS ABOVE",
+            "user_search": "",
+            "map_name": "",
+            "day_time": "",
+            "total_players": 0
+        }
+    ],
+    "xbox_unofficial_servers_and_players": [
+        {
+            "_comment": "You Can Delete This After You Have Atleast 1 Server In Here",
+            "_comment2": "If You Dont Have 1 Server In Here It Wont Work",
+            "server_name": "TEST CHECK COMMENTS ABOVE",
+            "total_servers": 0,
+            "total_players": 0
+        }
+    ],
+    "ps4_unofficial_servers_and_players": [
         {
             "_comment": "You Can Delete This After You Have Atleast 1 Server In Here",
             "_comment2": "If You Dont Have 1 Server In Here It Wont Work",
