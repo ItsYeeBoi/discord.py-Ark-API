@@ -101,10 +101,13 @@ To Run The Bot Using PM2:
 
 Plans
 -----
-- Add PS4 Official API
-- Add PS4 Dedicated Servers
+- Add PC Server List Using BattleMetrics
+- More Features Like Industrial Forge Calculator
+- Add More General Commands For Bot
 
-  - Use Nitrado PS4 Server List
+  - Bot Stats
+  - Bot Presence
+  - Better Help Command
 
 Links
 -----
